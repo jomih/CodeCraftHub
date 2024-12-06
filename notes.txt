@@ -1,0 +1,37 @@
+Estructura proyecto:
+
+user-service/
+├── src/
+│   ├── config/
+│   │   └── db.js              # Database connection configuration
+│   ├── controllers/
+│   │   └── userController.js   # User-related business logic
+│   ├── models/
+│   │   └── userModel.js        # User schema and model
+│   ├── routes/
+│   │   └── userRoutes.js       # API routes for user service
+│   ├── middleware/
+│   │   └── authMiddleware.js    # Authentication middleware
+│   ├── services/
+│   │   └── userService.js       # User service logic (e.g., registration, login)
+│   └── index.js                # Main entry point of the application
+├── tests/
+│   └── user.test.js            # Test cases for user service
+├── .env                         # Environment variables
+├── .gitignore                   # Files to ignore in Git
+├── package.json                 # Project metadata and dependencies
+└── README.md                    # Project documentation
+
+
+mkdir user-service
+   cd user-service
+   npm init -y
+
+npm install express mongoose dotenv bcryptjs jsonwebtoken
+
+To obtain the secret key, execute the following command in the terminal.
+    node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+Para empezar: 
+    node src/index.js
+    
